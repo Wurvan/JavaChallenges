@@ -50,28 +50,28 @@ public class HackerLanguage {
 
 	public static void main(String[] args) {
 		String converted;
-		Scanner scanner = new Scanner(System.in);
-		do {
-			System.out.print("Enter a sentence to convert: ");
+		try (Scanner scanner = new Scanner(System.in)) {
+			do {
+				System.out.print("Enter a sentence to convert: ");
 
-			String sentence = "";
-			sentence = scanner.nextLine().toLowerCase();
-			converted = "";
-			for (int i = 0; i < sentence.length(); i++) {
-				for (Character clave : setConvertor().keySet()) {
-					if (clave == sentence.charAt(i)) {
-						converted += setConvertor().get(clave);
+				String sentence = "";
+				sentence = scanner.nextLine().toLowerCase();
+				converted = "";
+				for (int i = 0; i < sentence.length(); i++) {
+					for (Character clave : setConvertor().keySet()) {
+						if (clave == sentence.charAt(i)) {
+							converted += setConvertor().get(clave);
+						}
 					}
-					
-				}
-				if(!setConvertor().containsKey(sentence.charAt(i))) {
+					if (!setConvertor().containsKey(sentence.charAt(i))) {
 						converted += sentence.charAt(i);
 					}
-			}
-			System.out.println(converted);
-			if (sentence.equals("")) {
-				break;
-			}
-		} while (true);
+				}
+				System.out.println(converted);
+				if (sentence.equals("")) {
+					break;
+				}
+			} while (true);
+		}
 	}
 }
