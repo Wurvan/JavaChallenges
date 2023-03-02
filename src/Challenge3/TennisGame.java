@@ -1,8 +1,6 @@
 package Challenge3;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Scanner;
 
 /*
@@ -42,24 +40,25 @@ public class TennisGame {
 	}
 
 	public static void createSequence() {
-		Scanner scanner = new Scanner(System.in);
-		String input;
+		try (Scanner scanner = new Scanner(System.in)) {
+			String input;
 
-		input = scanner.nextLine().toUpperCase();
-		String[] sequence = input.split("[,\\s.;-]+");
-		ArrayList<Player> finalSeq = new ArrayList<Player>();
+			input = scanner.nextLine().toUpperCase();
+			String[] sequence = input.split("[,\\s.;-]+");
+			ArrayList<Player> finalSeq = new ArrayList<Player>();
 
-		System.out.println("Let's the match starts!");
-		System.out.println("================================");
-		for (int i = 0; i < sequence.length; i++) {
-			if (sequence[i].equals(P1.getName())) {
-				finalSeq.add(P1);
+			System.out.println("Let's the match starts!");
+			System.out.println("================================");
+			for (int i = 0; i < sequence.length; i++) {
+				if (sequence[i].equals(P1.getName())) {
+					finalSeq.add(P1);
+				}
+				if (sequence[i].equals(P2.getName())) {
+					finalSeq.add(P2);
+				}
 			}
-			if (sequence[i].equals(P2.getName())) {
-				finalSeq.add(P2);
-			}
+			setPoints(finalSeq);
 		}
-		setPoints(finalSeq);
 
 	}
 
