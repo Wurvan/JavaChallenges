@@ -12,4 +12,8 @@ Exercises with JAVA
 
 #5 - | Media | PRIMO, FIBONACCI Y PAR |## 🔗 [Link](https://github.com/Wurvan/JavaChallenges/tree/main/src/Challenge5)
 
+#6 - | Media | PIEDRA, PAPEL, TIJERA, LAGARTO, SPOCK |## 🔗 [Link](https://github.com/Wurvan/JavaChallenges/tree/main/src/Challenge6)
+
+#7 - | Media | EL SOMBRERO SELECCIONADOR | ## 🔗 [Link](https://github.com/Wurvan/JavaChallenges/tree/main/src/Challenge7)
+
 [Credits](https://github.com/mouredev/retos-programacion-2023)
